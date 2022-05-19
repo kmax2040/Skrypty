@@ -66,7 +66,7 @@ function clearArea() {
     blocks.fill(Block.Air, pos(-25, 10, -25), pos(25, 20, 25))
     blocks.fill(Block.Dirt, pos(-25, -5, -25), pos(25, -2, 25))
     blocks.fill(Block.Grass, pos(-25, -1, -25), pos(25, -1, 25))
-    blocks.place(Block.Bedrock, pos(0, -1, 0))
+    // blocks.place(Block.Bedrock, pos(0, -1, 0))
 }
 
 function castleTower(origin: Position, height: number, variant: null | "roof" = null) {

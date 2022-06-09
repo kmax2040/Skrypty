@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - ask_for_the_list_of_tournaments
+  - ask_for_the_list_of_competitors
+  - deny
+  - bot_challenge
+
+entities:
+  - tournament
+
+slots:
+  tournament:
+    type: text
+    mappings:
+    - type: from_text
+      entity: tournament
+  tournament_index:
+    type: any
+    initial_value: -1
+    mappings:
+    - type: custom
+
+actions:
+  - action_list_tournaments
+  - action_list_competitors
+  - action_confirm_tournament_name
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ok:
+  - text: "Ok"
+
+  utter_iamabot:
+  - text: "I am a tournament bot."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

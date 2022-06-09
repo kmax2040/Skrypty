@@ -1,0 +1,76 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: ask_for_the_list_of_tournaments
+  examples: |
+    - give me the list of tournaments
+    - give me the list of available tournaments
+    - list the tournaments
+    - list the available tournaments
+    - what are the tournaments
+    - what are the current tournaments
+    - what are the available tournaments
+
+- intent: ask_for_the_list_of_competitors
+  examples: |
+    - list players in [Game Adjective Competition](tournament)
+    - list competitors in [Game Adjective Tournament](tournament)
+    - list participants in [Another Game Adjective Championships](tournament)
+    - what are the players in [Game Championships](tournament)
+    - what are the participants in [Some Game Tournament](tournament)
+    - what are the competitors in [Another Championships](tournament)
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

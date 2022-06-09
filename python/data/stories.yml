@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: list tournaments
+  steps:
+  - intent: ask_for_the_list_of_tournaments
+  - action: action_list_tournaments
+
+- story: list competitors 1
+  steps:
+  - intent: ask_for_the_list_of_competitors
+    entities:
+      - tournament
+  - action: action_confirm_tournament_name
+  - intent: affirm
+  - action: action_list_competitors
+
+- story: list competitors 2
+  steps:
+  - intent: ask_for_the_list_of_competitors
+    entities:
+      - tournament
+  - action: action_confirm_tournament_name
+  - intent: deny
+  - action: utter_ok
